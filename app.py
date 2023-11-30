@@ -43,7 +43,7 @@ def send_data():
     response.headers.add('Access-Control-Allow-Credentials', '*')
     return response
 
-if __name__ == "__main__":
-    print("Hello")
+# if __name__ == "__main__":
+#     print("Hello")
     
-    app.run(port=5000)
+#     app.run(port=5000)
