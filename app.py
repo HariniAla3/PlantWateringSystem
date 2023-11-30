@@ -30,7 +30,7 @@ def enter_data():
 
 @app.route('/sendData', methods=['GET'])
 def send_data():
-    latest_record = collection1.find_one(sort=[("timestamp", -1)])
+    latest_record = collection1.find_one(sort=[("time", -1)])
     # latest_record = list(collection1.find())
     print(latest_record)
     response_data={ 
@@ -44,7 +44,7 @@ def send_data():
     # response.headers.add('Access-Control-Allow-Credentials', '*')
     return response
 
-# if __name__ == "__main__":
-#     print("Hello")
+if __name__ == "__main__":
+    print("Hello")
     
-#     app.run(port=5000)
+    app.run(port=5000)
