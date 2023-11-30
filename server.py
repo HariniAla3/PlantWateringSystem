@@ -14,6 +14,10 @@ collection1 = db.EnvironmentData
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def ping():
+    return "Hello world"
+
 @app.route('/enterData', methods=['POST'])
 def enter_data():
     data = json.loads(request.data)
